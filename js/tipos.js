@@ -4,7 +4,7 @@
  */
 
 /**
- * @typedef {Object} Ropa
+ * @typedef {Object} Alumno
  * @property {string} nombre
  */
 

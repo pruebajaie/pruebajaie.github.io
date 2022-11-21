@@ -15,7 +15,7 @@ const lista = document.
   querySelector("#lista");
 const daoAlumno =
   getFirestore().
-    collection("Ropa");
+    collection("Alumno");
 
 getAuth().
   onAuthStateChanged(
@@ -66,8 +66,8 @@ function htmlFila(doc) {
    * @type {import("./tipos.js").
                   Alumno} */
   const data = doc.data();
-  const cod = cod(data.cod);
-  const prenda = cod(data.prenda);
+  const matricula = cod(data.matricula);
+  const nombre = cod(data.nombre);
   var fsf= cod(data.fecha);
   var fecha = new Date(fsf);
   var espacio="[   -   ]";
@@ -80,7 +80,7 @@ function htmlFila(doc) {
       <a class="fila" href=
   "alumno.html?${parámetros}">
         <strong class="primario">
-          ${cod} ${prenda} ${dformat}
+          ${matricula} ${nombre} ${dformat}
         </strong>
       </a>
      

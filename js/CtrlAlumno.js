@@ -15,7 +15,7 @@ import {
 
 const daoAlumno =
   getFirestore().
-    collection("Alumno");
+    collection("Ropa");
 const params =
   new URL(location.href).
     searchParams;
@@ -48,7 +48,7 @@ async function busca() {
       /**
        * @type {
           import("./tipos.js").
-                  Alumno} */
+                  Ropa} */
       const data = doc.data();
       forma.cod.value = data.cod;
       forma.prenda.value = data.prenda || "";
